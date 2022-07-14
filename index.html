@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Open WhatsApp</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#408e7e">
+  <style type="text/css">
+    body {
+      background: #fafafa;
+      color: #1c1e21;
+      font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+    }
+
+    input[type=text] {
+      border: solid 2px #cdd0d5;
+      color: #5e5e5e;
+      font-size: 14px;
+      line-height: 26px;
+      padding: 16px;
+      width: 300px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    a#continue {
+      border-radius: 40px;
+      padding: 16px 32px;
+      text-align: center;
+      background: #128c7e;
+      color: #ffffff;
+      border-style: none;
+      text-decoration: none;
+    }
+  </style>
+  <script type="text/javascript">
+    // whenever a#continue is clicked
+    // decorate input value to only show integer without space
+    // set the href value with phone number
+    window.onload = function () {
+      var element = document.getElementById('continue');
+      element.addEventListener("click", function(e) {
+        var phoneNumberInput = document.getElementById('phone-number');
+        var phoneNumberOnly = phoneNumberInput.value.replace(/\D/g, "");
+        element.setAttribute("href", "https://wa.me/" + phoneNumberOnly);
+      }, false);
+    };
+  </script>
+</head>
+
+<body>
+  <div>
+    <h1><img src="https://scontent.fkul14-1.fna.fbcdn.net/v/t39.8562-6/146663521_2242441489222923_2295570489824636781_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6825c5&_nc_ohc=ZfOS-eW8H5IAX_eASgg&_nc_ht=scontent.fkul14-1.fna&oh=00_AT-L3osFBLeDFTgZcxmMd8_ee_z1qch6bCtLFlhR9WleoQ&oe=62D50409"></h1>
+    <form>
+      <p>
+        Enter phone number with country code <br><br>
+        <input type="text" id="phone-number" name="phone-number"><br><br>
+      </p>
+      <p>
+        <a id="continue" href="#">Continue</a>
+      </p>
+    </form>
+  </div>
+</body>
+
+</html>
