@@ -20,7 +20,7 @@
     input[type=text] {
       border: solid 2px #cdd0d5;
       color: #5e5e5e;
-      font-size: 14px;
+      font-size: 20px;
       line-height: 26px;
       padding: 16px;
       width: 300px;
@@ -29,6 +29,7 @@
     }
 
     a#continue {
+      font-size: 20px;
       border-radius: 40px;
       padding: 16px 32px;
       text-align: center;
@@ -36,6 +37,12 @@
       color: #ffffff;
       border-style: none;
       text-decoration: none;
+    }
+
+    .credit {
+      font-size: 10px;
+      margin-top: 50px;
+      opacity: 0.3;
     }
   </style>
   <script type="text/javascript">
@@ -58,14 +65,18 @@
     <h1><img src="https://scontent.fkul14-1.fna.fbcdn.net/v/t39.8562-6/146663521_2242441489222923_2295570489824636781_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6825c5&_nc_ohc=ZfOS-eW8H5IAX_eASgg&_nc_ht=scontent.fkul14-1.fna&oh=00_AT-L3osFBLeDFTgZcxmMd8_ee_z1qch6bCtLFlhR9WleoQ&oe=62D50409"></h1>
     <form>
       <p>
-        To text on WhatsApp without saving a phone number,<br>
-        enter the phone number with country code <br><br>
+        To text on WhatsApp without saving a phone number,
+        enter the phone number with country code.<br>
+        <small>e.g. +1 (234) 567-8901, 12345678901<small><br><br>
         <input type="text" id="phone-number" name="phone-number"><br><br>
       </p>
       <p>
         <a id="continue" href="#">Continue</a>
       </p>
     </form>
+    <p class="credit">
+      Another boring project by <a href="https://vicovictor.github.io/" target="_blank">Victor</a>
+    </p>
   </div>
 </body>
 
